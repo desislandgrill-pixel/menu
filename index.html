@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deserene's Island Grill - Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a;
+            background-image: radial-gradient(circle at top right, #1e293b 0%, transparent 40%),
+                              radial-gradient(circle at bottom left, #1e293b 0%, transparent 40%);
+            background-attachment: fixed;
+            color: #f8fafc;
+        }
+
+
+        h1, h2, h3 {
+            font-family: 'Oswald', sans-serif;
+        }
+
+
+        .menu-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            border-color: rgba(250, 204, 21, 0.3);
+        }
+
+
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 2rem;
+        }
+        @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+        }
+
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+
+
+        .modal-bg { animation: fadeIn 0.2s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        
+        .hero-section {
+            background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.8), #0f172a), url('./hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        .img-loading {
+            filter: blur(10px);
+            background: #1e293b;
+            transition: filter 0.3s ease;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen pb-12">
+
+
+    <!-- Header Section -->
+    <header class="relative pt-16 pb-12 text-center overflow-hidden hero-section">
+        <div class="relative z-10 max-w-4xl mx-auto px-4">
+            <div class="inline-flex items-center justify-center space-x-3 mb-4">
+                <i class="fa-solid fa-fire-flame-curved text-red-500 text-4xl"></i>
+                <h1 class="text-5xl md:text-6xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-yellow-400 to-red-500 uppercase">
+                    Deserene's
+                </h1>
+                <i class="fa-solid fa-fire-flame-curved text-red-500 text-4xl"></i>
+            </div>
+            <p class="text-xl md:text-2xl font-light tracking-widest text-gray-300 uppercase mb-8">Island Grill</p>
+            
+            <a href="tel:18683826671" class="inline-flex items-center bg-yellow-400 text-slate-900 px-8 py-3 rounded-full font-bold text-lg shadow-[0_0_20px_rgba(250,204,21,0.4)] hover:bg-yellow-300 transition-colors duration-300 transform hover:scale-105 mb-4 sm:mb-0">
+                <i class="fas fa-phone-alt mr-3"></i> CALL: 1 (868) 382-6671
+            </a>
+            
+            <div class="mt-6 z-20 relative">
+                <a href="https://instagram.com/deserenes_islandgrill" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-pink-500 hover:text-pink-400 font-medium transition-colors bg-slate-900/50 px-4 py-2 rounded-full backdrop-blur-sm border border-pink-500/30">
+                    <i class="fab fa-instagram text-2xl mr-2"></i> @deserenes_islandgrill
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+        <div class="masonry-grid">
+            
+            <!-- COMBOS -->
+            <div class="masonry-item">
+                <section class="menu-card rounded-2xl p-6 md:p-8">
+                    <div class="border-b-2 border-yellow-400 pb-3 mb-6 flex justify-between items-end">
+                        <h2 class="text-3xl font-bold text-white tracking-wide uppercase">Combos</h2>
+                        <span class="bg-yellow-400/20 text-yellow-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-yellow-400/30">1 Side Included</span>
+                    </div>
+                    <ul class="space-y-5">
+                        <li class="flex justify-between items-start group"><div><span class="font-bold text-lg text-white">1. Chicken</span><p class="text-sm text-gray-400">BBQ or Jerk</p></div><span class="font-bold text-yellow-400 text-xl ml-4">$65</span></li>
+                        <li class="flex justify-between items-start group"><div><span class="font-bold text-lg text-white">2. Pork Slice</span><p class="text-sm text-gray-400">BBQ or Jerk</p></div><span class="font-bold text-yellow-400 text-xl ml-4">$70</span></li>
+                        <li class="flex justify-between items-start group"><div><span class="font-bold text-lg text-white">3. Lamb</span><p class="text-sm text-gray-400">BBQ or Jerk</p></div><span class="font-bold text-yellow-400 text-xl ml-4">$95</span></li>
+                        <li class="flex justify-between items-start group"><div><span class="font-bold text-lg text-white">4. Oxtail</span><p class="text-sm text-gray-400">BBQ or Jerk</p></div><span class="font-bold text-yellow-400 text-xl ml-4">$135</span></li>
+                        <li class="flex justify-between items-start group"><div><span class="font-bold text-lg text-white">5. Pigtail</span><p class="text-sm text-gray-400">BBQ</p></div><span class="font-bold text-yellow-400 text-xl ml-4">$80</span></li>
+                        <li class="flex justify-between items-start group"><div><span class="font-bold text-lg text-white">6. Shrimp</span><p class="text-sm text-gray-400">Grill or Jerk</p></div><span class="font-bold text-yellow-400 text-xl ml-4">$100</span></li>
+                        <li class="flex justify-between items-start group"><div><span class="font-bold text-lg text-white">7. Fish</span><p class="text-sm text-gray-400">Grill or Jerk</p></div><span class="font-bold text-yellow-400 text-xl ml-4">$80</span></li>
+                        <li class="flex justify-between items-start group"><div><span class="font-bold text-lg text-white">8. Steak</span></div><span class="font-bold text-yellow-400 text-xl ml-4">$120</span></li>
+                        <li class="flex justify-between items-start group"><div><span class="font-bold text-lg text-white">9. Rabbit</span><p class="text-sm text-gray-400">BBQ or Jerk</p></div><span class="font-bold text-yellow-400 text-xl ml-4">$100</span></li>
+                    </ul>
+                </section>
+            </div>
+
+
+            <!-- SALADS -->
+            <div class="masonry-item">
+                <section class="menu-card rounded-2xl p-6 md:p-8">
+                    <div class="border-b-2 border-green-400 pb-3 mb-6">
+                        <h2 class="text-3xl font-bold text-white tracking-wide uppercase">Salads</h2>
+                    </div>
+                    <ul class="space-y-6">
+                        <li>
+                            <div class="flex justify-between items-start mb-2"><div><span class="font-bold text-xl text-white">10. Greek Salad</span></div><span class="font-bold text-green-400 text-xl ml-4">$65</span></div>
+                            <p class="text-sm text-gray-400 font-light italic mb-3">Includes: lettuce, tomatoes, cucumbers, onion, feta cheese and olives.</p>
+                            <div class="bg-slate-900/80 rounded-xl p-3 border border-slate-700">
+                                <p class="text-xs text-gray-400 uppercase font-semibold mb-2">Price with Protein added:</p>
+                                <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                                    <div class="flex justify-between border-b border-slate-700/50 pb-1"><span class="text-gray-300">Chicken</span><span class="text-green-400 font-medium">$100</span></div>
+                                    <div class="flex justify-between border-b border-slate-700/50 pb-1"><span class="text-gray-300">Fish</span><span class="text-green-400 font-medium">$110</span></div>
+                                    <div class="flex justify-between pt-1"><span class="text-gray-300">Shrimp</span><span class="text-green-400 font-medium">$130</span></div>
+                                    <div class="flex justify-between pt-1"><span class="text-gray-300">Steak</span><span class="text-green-400 font-medium">$135</span></div>
+                                </div>
+                            </div>
+                        </li>
+                        <hr class="border-slate-700">
+                        <li>
+                            <div class="flex justify-between items-start mb-2"><div><span class="font-bold text-xl text-white">11. Caesar Salad</span></div></div>
+                            <p class="text-sm text-gray-400 font-light italic mb-3">Includes: lettuce, croutons and olives.</p>
+                            <div class="bg-slate-900/80 rounded-xl p-3 border border-slate-700">
+                                <p class="text-xs text-gray-400 uppercase font-semibold mb-2">Select your Protein:</p>
+                                <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                                    <div class="flex justify-between border-b border-slate-700/50 pb-1"><span class="text-gray-300">Chicken</span><span class="text-green-400 font-medium">$75</span></div>
+                                    <div class="flex justify-between border-b border-slate-700/50 pb-1"><span class="text-gray-300">Fish</span><span class="text-green-400 font-medium">$85</span></div>
+                                    <div class="flex justify-between pt-1"><span class="text-gray-300">Shrimp</span><span class="text-green-400 font-medium">$100</span></div>
+                                    <div class="flex justify-between pt-1"><span class="text-gray-300">Steak</span><span class="text-green-400 font-medium">$100</span></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+
+            <!-- SPECIAL -->
+            <div class="masonry-item">
+                <section class="menu-card rounded-2xl p-6 md:p-8 border-t-4 border-t-red-500">
+                    <div class="border-b-2 border-red-500 pb-3 mb-6 flex justify-between items-center">
+                        <h2 class="text-3xl font-bold text-white tracking-wide uppercase">Special</h2>
+                        <i class="fa-solid fa-star text-red-500 text-xl"></i>
+                    </div>
+                    <ul class="space-y-6">
+                        <li class="flex justify-between items-center group border-b border-slate-700/50 pb-3"><span class="font-bold text-lg text-white">20. Loaded Fries</span><span class="font-bold text-red-400 text-xl ml-4">$75</span></li>
+                        <li class="flex flex-col group border-b border-slate-700/50 pb-3"><div class="flex justify-between items-start"><span class="font-bold text-lg text-white">21. Surf 'N' Turf</span><span class="font-bold text-red-400 text-xl ml-4">$275</span></div><p class="text-sm text-gray-400 font-light mt-1">Shrimp, Steak, Any three (3) sides</p></li>
+                        <li class="flex justify-between items-center group border-b border-slate-700/50 pb-3"><span class="font-bold text-lg text-white">22. Chicken & Waffles</span><span class="font-bold text-red-400 text-xl ml-4">$65</span></li>
+                        <li class="flex justify-between items-center group border-b border-slate-700/50 pb-3"><span class="font-bold text-lg text-white">23. Philly-Cheesesteak & Fries</span><span class="font-bold text-red-400 text-xl ml-4">$110</span></li>
+                        <li class="flex flex-col group border-b border-slate-700/50 pb-3"><div class="flex justify-between items-start"><div class="flex items-center"><span class="font-bold text-lg text-white">26. The Box Combo</span><span class="ml-3 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-widest">Popular</span></div><span class="font-bold text-red-400 text-xl ml-4">$70</span></div><p class="text-sm text-gray-400 font-light mt-1">Fried Chicken Tenders, Fries or Wedges, 1 Sauce & Toast</p></li>
+                        <li class="flex flex-col group"><div class="flex justify-between items-start"><div class="flex items-center"><span class="font-bold text-lg text-white">27. Vegan Combo</span><span class="ml-3 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-widest">Vegan</span></div><span class="font-bold text-red-400 text-xl ml-4">$60</span></div><p class="text-sm text-gray-400 font-light mt-1">Three (3) sides</p></li>
+                    </ul>
+                </section>
+            </div>
+
+
+            <!-- PASTA -->
+            <div class="masonry-item">
+                <section class="menu-card rounded-2xl p-6 md:p-8">
+                    <div class="border-b-2 border-red-500 pb-3 mb-6">
+                        <h2 class="text-3xl font-bold text-white tracking-wide uppercase">Pasta</h2>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center group"><span class="font-bold text-lg text-white">12. Spaghetti & Meatballs</span><span class="font-bold text-red-400 text-xl ml-4">$65</span></li>
+                        <li class="flex justify-between items-center group"><span class="font-bold text-lg text-white">13. Spinach & Mushroom</span><span class="font-bold text-red-400 text-xl ml-4">$60</span></li>
+                        <li class="flex justify-between items-center group"><span class="font-bold text-lg text-white">24. Chicken Alfredo</span><span class="font-bold text-red-400 text-xl ml-4">$100</span></li>
+                        <li class="flex justify-between items-center group"><span class="font-bold text-lg text-white">25. Shrimp Alfredo</span><span class="font-bold text-red-400 text-xl ml-4">$125</span></li>
+                    </ul>
+                </section>
+            </div>
+
+
+            <!-- SANDWICH -->
+            <div class="masonry-item">
+                <section class="menu-card rounded-2xl p-6 md:p-8">
+                    <div class="border-b-2 border-red-500 pb-3 mb-6">
+                        <h2 class="text-3xl font-bold text-white tracking-wide uppercase">Sandwich</h2>
+                    </div>
+                    <ul class="space-y-5">
+                        <li class="flex justify-between items-start group"><span class="font-bold text-lg text-white pr-4">14. Jamaican Smash Burger & Fries</span><span class="font-bold text-red-400 text-xl shrink-0">$65</span></li>
+                        <li class="flex justify-between items-start group"><span class="font-bold text-lg text-white pr-4">15. Spicy Chicken Sandwich & Fries</span><span class="font-bold text-red-400 text-xl shrink-0">$70</span></li>
+                        <li class="flex justify-between items-start group"><span class="font-bold text-lg text-white pr-4">16. Sweet-Chilli Chicken Sandwich & Fries</span><span class="font-bold text-red-400 text-xl shrink-0">$75</span></li>
+                    </ul>
+                </section>
+            </div>
+
+
+            <!-- WRAPS -->
+            <div class="masonry-item">
+                <section class="menu-card rounded-2xl p-6 md:p-8">
+                    <div class="border-b-2 border-green-400 pb-3 mb-6">
+                        <h2 class="text-3xl font-bold text-white tracking-wide uppercase">Wraps</h2>
+                    </div>
+                    <ul class="space-y-6">
+                        <li class="flex flex-col group border-b border-slate-700/50 pb-4"><div class="flex justify-between items-start"><div class="flex items-center"><span class="font-bold text-lg text-white">17. Crispy Chicken Wrap</span><span class="ml-3 bg-yellow-400 text-slate-900 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-widest">New</span></div><span class="font-bold text-green-400 text-xl ml-4">$55</span></div><p class="text-sm text-gray-400 font-light mt-1 uppercase">Honey Mustard or BBQ</p></li>
+                        <li class="flex flex-col group border-b border-slate-700/50 pb-4"><div class="flex justify-between items-start"><div class="flex items-center"><span class="font-bold text-lg text-white">18. Jerk Chicken Wrap</span><span class="ml-3 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-widest">Popular</span></div><span class="font-bold text-green-400 text-xl ml-4">$45</span></div><p class="text-sm text-gray-400 font-light mt-1 capitalize">Mozzarella, lettuce, plantains, grilled chicken</p></li>
+                        <li class="flex flex-col group"><div class="flex justify-between items-start"><span class="font-bold text-lg text-white">19. Grilled Fish Wrap</span><span class="font-bold text-green-400 text-xl ml-4">$50</span></div><p class="text-sm text-gray-400 font-light mt-1 capitalize">Pineapple & tomatoes salsa, lettuce</p></li>
+                    </ul>
+                </section>
+            </div>
+
+
+            <!-- SIDES -->
+            <div class="masonry-item">
+                <section class="menu-card rounded-2xl p-6 md:p-8">
+                    <div class="border-b-2 border-green-400 pb-3 mb-6">
+                        <h2 class="text-3xl font-bold text-white tracking-wide uppercase">Sides</h2>
+                    </div>
+                    <ul class="grid grid-cols-1 gap-y-3">
+                        <li class="flex justify-between items-center border-b border-slate-700/50 pb-2"><span class="text-gray-200 font-medium">Fries</span><span class="text-green-400 font-bold">$25</span></li>
+                        <li class="flex justify-between items-center border-b border-slate-700/50 pb-2"><span class="text-gray-200 font-medium">Garlic Cassava Fries</span><span class="text-green-400 font-bold">$25</span></li>
+                        <li class="flex justify-between items-center border-b border-slate-700/50 pb-2"><span class="text-gray-200 font-medium">Wedges</span><span class="text-green-400 font-bold">$25</span></li>
+                        <li class="flex justify-between items-center border-b border-slate-700/50 pb-2"><span class="text-gray-200 font-medium">Sweet Potato Fries</span><span class="text-green-400 font-bold">$25</span></li>
+                        <li class="flex justify-between items-center border-b border-slate-700/50 pb-2"><span class="text-gray-200 font-medium">Dasheen Fries</span><span class="text-green-400 font-bold">$25</span></li>
+                        <li class="flex justify-between items-center border-b border-slate-700/50 pb-2"><span class="text-gray-200 font-medium">Fried Rice</span><span class="text-green-400 font-bold">$25</span></li>
+                        <li class="flex justify-between items-center border-b border-slate-700/50 pb-2"><span class="text-gray-200 font-medium">Fry Plantains</span><span class="text-green-400 font-bold">$15</span></li>
+                        <li class="flex justify-between items-center border-b border-slate-700/50 pb-2"><span class="text-gray-200 font-medium">Mashed Potatoes</span><span class="text-green-400 font-bold">$25</span></li>
+                        <li class="flex justify-between items-center border-b border-slate-700/50 pb-2"><span class="text-gray-200 font-medium">Steam Vegetables</span><span class="text-green-400 font-bold">$30</span></li>
+                        <li class="flex justify-between items-center border-b border-slate-700/50 pb-2"><span class="text-gray-200 font-medium">Parmesan Roasted Corn</span><span class="text-green-400 font-bold">$30</span></li>
+                        <li class="flex justify-between items-center border-b border-slate-700/50 pb-2"><div class="flex items-center"><span class="text-gray-200 font-medium">Mac & Cheese</span><span class="ml-2 bg-yellow-400 text-slate-900 text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">New</span></div><span class="text-green-400 font-bold">$25</span></li>
+                        <li class="flex justify-between items-center border-b border-slate-700/50 pb-2"><div class="flex items-center"><span class="text-gray-200 font-medium">Coleslaw</span><span class="ml-2 bg-yellow-400 text-slate-900 text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">New</span></div><span class="text-green-400 font-bold">$20</span></li>
+                        <li class="flex justify-between items-center"><span class="text-gray-200 font-medium">Breadfruit Fries</span><span class="text-green-400 font-bold">$25</span></li>
+                    </ul>
+                </section>
+            </div>
+
+
+        </div>
+    </main>
+
+
+    <!-- Instagram Gallery -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-white tracking-wide uppercase mb-3">From Our Instagram</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="aspect-square bg-slate-800 rounded-xl overflow-hidden group cursor-pointer border border-slate-700 shadow-lg">
+                <img src="./insta1.jpg" alt="Post 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://via.placeholder.com/400/1e293b/f8fafc?text=insta1.jpg'">
+            </div>
+            <div class="aspect-square bg-slate-800 rounded-xl overflow-hidden group cursor-pointer border border-slate-700 shadow-lg">
+                <img src="./insta2.jpg" alt="Post 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://via.placeholder.com/400/1e293b/f8fafc?text=insta2.jpg'">
+            </div>
+            <div class="aspect-square bg-slate-800 rounded-xl overflow-hidden group cursor-pointer border border-slate-700 shadow-lg">
+                <img src="./insta3.jpg" alt="Post 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://via.placeholder.com/400/1e293b/f8fafc?text=insta3.jpg'">
+            </div>
+            <div class="aspect-square bg-slate-800 rounded-xl overflow-hidden group cursor-pointer border border-slate-700 shadow-lg">
+                <img src="./insta4.jpg" alt="Post 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://via.placeholder.com/400/1e293b/f8fafc?text=insta4.jpg'">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="mt-16 text-center text-gray-500 text-sm pb-8 border-t border-slate-800 pt-8">
+        <p>&copy; 2026 Deserene's Island Grill. All rights reserved.</p>
+        <p class="mt-2 text-yellow-500/70">Prices are subject to change.</p>
+    </footer>
+
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="hidden fixed inset-0 z-50 items-center justify-center bg-slate-900/95 backdrop-blur-md modal-bg px-4">
+        <div class="relative w-full max-w-4xl mx-auto flex flex-col items-center">
+            <button id="closeModal" class="absolute -top-12 right-0 text-white text-3xl"><i class="fas fa-times"></i></button>
+            <img id="modalImage" src="" alt="Food Preview" class="w-full h-auto max-h-[70vh] object-contain rounded-xl shadow-2xl border border-slate-700 bg-slate-800">
+            <h3 id="modalCaption" class="text-center text-white text-2xl font-bold mt-6 uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-yellow-400 to-red-500"></h3>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            const closeBtn = document.getElementById('closeModal');
+
+
+            const closeModal = () => { modal.classList.add('hidden'); modal.classList.remove('flex'); };
+            closeBtn.onclick = closeModal;
+            modal.onclick = (e) => { if (e.target === modal) closeModal(); };
+
+
+            document.querySelectorAll('.menu-card li').forEach(item => {
+                // Ignore the sub-tables inside the Salads section
+                if (item.closest('.grid-cols-2')) return;
+
+
+                const nameSpan = item.querySelector('span');
+                if (!nameSpan) return;
+
+
+                const rawName = nameSpan.textContent.trim();
+                const cleanName = rawName.replace(/^\d+\.\s*/, '').replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+                
+                // Using standard relative path for GitHub Pages
+                const fileName = `./${cleanName}.jpg`;
+
+
+                item.classList.add('cursor-pointer', 'group', 'hover:bg-slate-800/60', 'p-2', '-mx-2', 'rounded-lg', 'transition-all', 'relative');
+                if (!nameSpan.innerHTML.includes('fa-camera')) {
+                    nameSpan.innerHTML += ' <i class="fas fa-camera text-slate-500 text-sm ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i>';
+                }
+
+
+                item.addEventListener('click', () => {
+                    modalImg.classList.add('img-loading');
+                    modalImg.src = fileName;
+                    
+                    // Set Caption text (Removes the leading numbers)
+                    modalCaption.textContent = rawName.replace(/^\d+\.\s*/, '');
+                    
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                    
+                    modalImg.onload = () => modalImg.classList.remove('img-loading');
+                    modalImg.onerror = () => {
+                        // Fallback logic so it doesn't appear broken if a photo is missing
+                        modalImg.src = `https://via.placeholder.com/800x600/1e293b/f8fafc?text=${cleanName}.jpg`;
+                        modalImg.classList.remove('img-loading');
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html>
